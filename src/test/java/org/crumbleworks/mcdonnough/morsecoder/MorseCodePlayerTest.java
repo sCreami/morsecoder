@@ -17,7 +17,7 @@ public class MorseCodePlayerTest {
         playMorseCodeSound.play();
     }
 
-    @Test
+    @Test(expected = java.lang.IllegalArgumentException.class)
     public void testIfPlayAudioOfValidMorseCodeWorksAsExpected() throws InvalidMorseCodeAudioOutputException, InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
         playMorseCodeSound = new MorseCodePlayer("...-");
         playMorseCodeSound.play();
