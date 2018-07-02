@@ -54,7 +54,11 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <foo>bar</foo>
+                    <includes>
+                        <include>DecoderTest.java</include>
+                        <include>EncoderTest.java</include>
+                        <include>MorseCodePlayerTest.java</include>
+                    </includes>
                 </configuration>
             </plugin>
         </plugins>
