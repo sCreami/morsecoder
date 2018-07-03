@@ -58,15 +58,16 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.7</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <id>check</id>
-                    </execution>
-                </executions>
                 <configuration>
+                    <formats>
+                        <format>xml</format>
+                        <format>html</format>
+                    </formats>
+                    <instrumentation>
+                        <ignores>
+                            <ignore>org.crumbleworks.mcdonnough.morsecoder.Main</ignore>
+                        </ignores>
+                    </instrumentation>
                     <check>
                         <branchRate>80</branchRate>
                         <lineRate>80</lineRate>
@@ -75,15 +76,16 @@
                         <totalLineRate>80</totalLineRate>
                         <packageLineRate>80</packageLineRate>
                         <packageBranchRate>80</packageBranchRate>
-                        <regexes>
-                            <regex>
-                                <pattern>org.crumbleworks.mcdonnough.morsecoder.Main</pattern>
-                                <branchRate>0</branchRate>
-                                <lineRate>0</lineRate>
-                            </regex>
-                        </regexes>
                     </check>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -98,12 +100,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.7</version>
-                <configuration>
-                    <formats>
-                        <format>html</format>
-                        <format>xml</format>
-                    </formats>
-                </configuration>
             </plugin>
         </plugins>
     </reporting>
