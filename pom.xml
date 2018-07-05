@@ -114,13 +114,23 @@
                     <sourceEncoding>utf-8</sourceEncoding>
                     <minimumTokens>100</minimumTokens>
                     <targetJdk>1.7</targetJdk>
-                    <excludes>
-                        <exclude>**/*Bean.java</exclude>
-                        <exclude>**/generated/*.java</exclude>
-                    </excludes>
-                    <excludeRoots>
-                        <excludeRoot>target/generated-sources/stubs</excludeRoot>
-                    </excludeRoots>
+                    <rulesets>
+                        <ruleset>/rulesets/basic.xml</ruleset>
+                        <ruleset>/rulesets/junit.xml</ruleset>
+                        <ruleset>/rulesets/braces.xml</ruleset>
+                        <ruleset>/rulesets/codesize.xml</ruleset>
+                        <ruleset>/rulesets/controversial.xml</ruleset>
+                        <ruleset>/rulesets/coupling.xml</ruleset>
+                        <ruleset>/rulesets/design.xml</ruleset>
+                        <ruleset>/rulesets/empty.xml</ruleset>
+                        <ruleset>/rulesets/imports.xml</ruleset>
+                        <ruleset>/rulesets/naming.xml</ruleset>
+                        <ruleset>/rulesets/optimizations.xml</ruleset>
+                        <ruleset>/rulesets/strings.xml</ruleset>
+                        <ruleset>/rulesets/typeresolution.xml</ruleset>
+                        <ruleset>/rulesets/unnecessary.xml</ruleset>
+                        <ruleset>/rulesets/unusedcode.xml</ruleset>
+                    </rulesets>
                 </configuration>
             </plugin>
         </plugins>
