@@ -15,11 +15,6 @@
             <version>4.11</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -93,6 +88,19 @@
                             <goal>pmd</goal>
                         </goals>
                         <id>cpd</id>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>findbugs</goal>
+                        </goals>
+                        <id>findbugs</id>
                     </execution>
                 </executions>
             </plugin>
