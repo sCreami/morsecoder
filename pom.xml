@@ -33,7 +33,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <foo>bar</foo>
+                    <configLocation>google_checks.xml</configLocation>
                 </configuration>
             </plugin>
             <plugin>
